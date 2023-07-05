@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Food Menu Adviser</string>
+    <string name="find_menu">Find Food Menu</string>
+    <string name="menu">No meal selected</string>
+    <string-array name="meals">
+        <item>breakfast</item>
+        <item>lunch</item>
+        <item>dinner</item>
+    </string-array>
+</resources>
