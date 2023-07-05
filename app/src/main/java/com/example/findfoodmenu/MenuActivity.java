@@ -19,6 +19,5 @@ public class MenuActivity extends Activity {
         String messageText = intent.getStringExtra(EXTRA_MESSAGE);
         TextView  messageView = (TextView)findViewById(R.id.menus);
         messageView.setText(messageText);
-
     }
 }
