@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.List;
 
+public class MainActivity extends AppCompatActivity {
+    private MealExpert expert = new MealExpert();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,10 +19,15 @@ public class MainActivity extends AppCompatActivity {
 
     //Called when the user clicks the button
     public void onClickFindMenu (View view){
-        TextView menu = (TextView) findViewById(R.id.menu);
+        TextView menus = (TextView) findViewById(R.id.menus);
         Spinner meals = (Spinner) findViewById(R.id.meals);
         String meal = String.valueOf(meals.getSelectedItem());
-        menu.setText("You have selected "+meal);
-
+        //menus.setText("You have selected "+meal);
+        List<String> menuList = expert.getMenus(meal);
+        StringBuilder menuFormatted = new StringBuilder();
+        for(String menu: menuList) {
+            menuFormatted.append(menu).append('\n');
+        }
+        menus.setText(menuFormatted);
     }
 }

@@ -28,7 +28,7 @@
         android:onClick="onClickFindMenu"/>
 
     <TextView
-        android:id="@+id/menu"
+        android:id="@+id/menus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
