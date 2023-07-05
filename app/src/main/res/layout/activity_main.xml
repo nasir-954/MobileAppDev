@@ -12,10 +12,11 @@
         android:id="@+id/meals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:entries="@array/meals"/>
+        android:layout_marginTop="48dp"
+        android:entries="@array/meals"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/find_menu"
@@ -26,7 +27,7 @@
         android:text="@string/find_menu"
         android:textSize="24sp"
         android:onClick="onClickFindMenu"/>
-
+    <!--
     <TextView
         android:id="@+id/menus"
         android:layout_width="wrap_content"
@@ -35,8 +36,5 @@
         android:layout_margin="16dp"
         android:textSize="24sp"
         android:text="@string/menu" />
-
-
-
-
+    -->
 </LinearLayout>

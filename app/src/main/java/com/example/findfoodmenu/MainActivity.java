@@ -2,6 +2,7 @@ package com.example.findfoodmenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
@@ -19,7 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     //Called when the user clicks the button
     public void onClickFindMenu (View view){
+        //Added for launching Menuactivity
+        Intent intent = new Intent(this, MenuActivity.class);
+
+
+
         TextView menus = (TextView) findViewById(R.id.menus);
+
         Spinner meals = (Spinner) findViewById(R.id.meals);
         String meal = String.valueOf(meals.getSelectedItem());
         //menus.setText("You have selected "+meal);
@@ -28,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         for(String menu: menuList) {
             menuFormatted.append(menu).append('\n');
         }
-        menus.setText(menuFormatted);
+        //menus.setText(menuFormatted);
+        //Casting text view to String
+        String menusText = menuFormatted.toString();
+
+        intent.putExtra(MenuActivity.EXTRA_MESSAGE, menusText);
+        startActivity(intent);
     }
 }
